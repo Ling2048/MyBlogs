@@ -66,9 +66,11 @@ class Write extends React.Component {
                     value={this.state.SMDEText}
                     onChange={this.SMDEOnChange}
                 />
-                <Button  type="primary" loading={this.state.loading} onClick={this.enterLoading}>
-                    发布
-                </Button>
+                <div>
+                    <Button style={{width: "100px"}} type="primary" loading={this.state.loading} onClick={this.enterLoading}>
+                        发布
+                    </Button>
+                </div>
                 <style jsx>{`
                 .anticon-close-circle {
                     cursor: pointer;

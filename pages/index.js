@@ -26,28 +26,8 @@ class Index extends React.Component {
       break;
     }
 
-    return <Layout>
-      <Head title="MyBlogs" />
-      {/* <Header className="header">
-        <div className="logo" />
-        <Menu
-          theme="dark"
-          mode="horizontal"
-          defaultSelectedKeys={['2']}
-          style={{ lineHeight: '64px' }}
-        >
-          <Menu.Item key="1">nav 1</Menu.Item>
-          <Menu.Item key="2">nav 2</Menu.Item>
-          <Menu.Item key="3">nav 3</Menu.Item>
-        </Menu>
-      </Header> */}
-      <Content>
-        {/* <Breadcrumb style={{ margin: '16px 0' }}>
-          <Breadcrumb.Item>Home</Breadcrumb.Item>
-          <Breadcrumb.Item>List</Breadcrumb.Item>
-          <Breadcrumb.Item>App</Breadcrumb.Item>
-        </Breadcrumb> */}
-        <Layout hasSider={true}>
+    return <Layout hasSider={true}>
+          <Head title="MyBlogs" />
           <Sider
             breakpoint="lg"
             collapsedWidth="0"
@@ -60,7 +40,7 @@ class Index extends React.Component {
               </a>
               {/* <p className="name">L2048</p> */}
             </div>
-            <Menu theme="dark" mode="inline" defaultSelectedKeys={['1']}>
+            <Menu theme="dark" mode="inline" defaultSelectedKeys={[(this.state.pageIndex + 1).toString()]}>
               <Menu.Item key="1" onClick={()=>{
                   this.setState({pageIndex: 0});
                 }}>
@@ -76,33 +56,32 @@ class Index extends React.Component {
             </Menu>
           </Sider>
           <Layout>
-            <Content style={{ margin: '24px 16px 0' }}>
+            <Content style={{ margin: '24px 16px 0px' }}>
               {page}
             </Content>
             <Footer style={{ textAlign: 'center' }}>
               {/* Ant Design ©2016 Created by Ant UED */}
             </Footer>
           </Layout>
+          <style jsx>{`
+          .logo {
+            height: 32px;
+            background: rgba(255,255,255,.2);
+            margin: 16px;
+            text-align: center;
+            color: white;
+          }
+          .name {
+            line-height: 32px;
+          }
+          `}</style>
+          <style jsx global>{ stylesheet }</style>
         </Layout>
-      </Content>
       {/* <Footer style={{ textAlign: 'center' }}>
         Ant Design ©2016 Created by Ant UED
       </Footer> */}
 
-      <style jsx>{`
-      .logo {
-        height: 32px;
-        background: rgba(255,255,255,.2);
-        margin: 16px;
-        text-align: center;
-        color: white;
-      }
-      .name {
-        line-height: 32px;
-      }
-      `}</style>
-      <style jsx global>{ stylesheet }</style>
-    </Layout>;
+
   }
 } 
 
