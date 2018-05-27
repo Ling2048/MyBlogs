@@ -38,7 +38,6 @@ class Index extends React.Component {
               <a className="name" href="https://github.com/Ling2048" >
                 github
               </a>
-              {/* <p className="name">L2048</p> */}
             </div>
             <Menu theme="dark" mode="inline" defaultSelectedKeys={[(this.state.pageIndex + 1).toString()]}>
               <Menu.Item key="1" onClick={()=>{
