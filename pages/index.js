@@ -77,10 +77,6 @@ class Index extends React.Component {
           `}</style>
           <style jsx global>{ stylesheet }</style>
         </Layout>
-      {/* <Footer style={{ textAlign: 'center' }}>
-        Ant Design ©2016 Created by Ant UED
-      </Footer> */}
-
 
   }
 } 
