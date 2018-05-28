@@ -73,16 +73,15 @@ class Index extends React.Component {
             </Footer>
           </Layout>
           <style jsx>{`
-          .ant-upload-list-item {
-            float: left;
-            width: 200px;
-            margin-right: 8px;
+          .logo {
+            height: 32px;
+            background: rgba(255,255,255,.2);
+            margin: 16px;
+            text-align: center;
+            color: white;
           }
-          .ant-upload-animate-enter {
-            animation-name: uploadAnimateInlineIn;
-          }
-          .ant-upload-animate-leave {
-            animation-name: uploadAnimateInlineOut;
+          .name {
+            line-height: 32px;
           }
           `}</style>
           <style jsx global>{ stylesheet }</style>

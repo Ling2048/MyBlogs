@@ -50,17 +50,16 @@ class Uploads extends React.Component {
                         </Button>
                     </Upload>
                 <style jsx>{`
-                .anticon-close-circle {
-                    cursor: pointer;
-                    color: #ccc;
-                    transition: color 0.3s;
-                    font-size: 12px;
+                .ant-upload-list-item {
+                    float: left;
+                    width: 200px;
+                    margin-right: 8px;
                 }
-                .anticon-close-circle:hover {
-                    color: #999;
+                .ant-upload-animate-enter {
+                    animation-name: uploadAnimateInlineIn;
                 }
-                .anticon-close-circle:active {
-                    color: #666;
+                .ant-upload-animate-leave {
+                    animation-name: uploadAnimateInlineOut;
                 }
                 `}</style>
             </div>
