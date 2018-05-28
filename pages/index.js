@@ -8,6 +8,7 @@ const { Header, Content, Footer, Sider } = Layout;
 
 import Blogs from './Contents/Blogs';
 import Write from './Contents/Write';
+import Uploads from './Contents/Uploads';
 
 class Index extends React.Component {
   constructor (prop) {
@@ -23,6 +24,9 @@ class Index extends React.Component {
       break;
       case 1:
         page = <Write />;
+      break;
+      case 2:
+        page = <Uploads />;
       break;
     }
 
@@ -52,6 +56,12 @@ class Index extends React.Component {
                 <Icon type="book" />
                 <span className="nav-text" >Write</span>
               </Menu.Item>
+              <Menu.Item key="3" onClick={()=>{
+                  this.setState({pageIndex: 2});
+                }}>
+                <Icon type="book" />
+                <span className="nav-text" >Upload</span>
+              </Menu.Item>
             </Menu>
           </Sider>
           <Layout>
@@ -63,15 +73,16 @@ class Index extends React.Component {
             </Footer>
           </Layout>
           <style jsx>{`
-          .logo {
-            height: 32px;
-            background: rgba(255,255,255,.2);
-            margin: 16px;
-            text-align: center;
-            color: white;
+          .ant-upload-list-item {
+            float: left;
+            width: 200px;
+            margin-right: 8px;
           }
-          .name {
-            line-height: 32px;
+          .ant-upload-animate-enter {
+            animation-name: uploadAnimateInlineIn;
+          }
+          .ant-upload-animate-leave {
+            animation-name: uploadAnimateInlineOut;
           }
           `}</style>
           <style jsx global>{ stylesheet }</style>

@@ -31,6 +31,14 @@ html,body,#root{
 #__next{
     height: 100%;
 }
-/* .ant-layout-content{
-    height: 100%;
-} */
+.ant-upload-list-item {
+    float: left;
+    width: 200px;
+    margin-right: 8px;
+  }
+  .ant-upload-animate-enter {
+    animation-name: uploadAnimateInlineIn;
+  }
+  .ant-upload-animate-leave {
+    animation-name: uploadAnimateInlineOut;
+  }
